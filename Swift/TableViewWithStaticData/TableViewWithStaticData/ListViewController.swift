@@ -10,21 +10,32 @@ import UIKit
 class ListViewController: UIViewController {
 
     @IBOutlet weak var listView: UITableView!
+    let imageService = ImageService()
+    var pictures = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.largeTitleDisplayMode = .never
+        fetchData()
     }
-
+    
+    func fetchData() {
+        imageService.fetchImages { [weak self] images in
+            guard let self = self else { return }
+            self.pictures = images
+            self.listView.reloadData()
+        }
+    }
+    
 }
 
 extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return pictures.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = "Kiran"
+        cell.textLabel?.text = pictures[indexPath.row]
         return cell
     }
 

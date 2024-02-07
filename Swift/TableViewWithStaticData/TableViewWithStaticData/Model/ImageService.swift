@@ -8,17 +8,22 @@
 import Foundation
 
 class ImageService {
-    func fetchImages() -> [String]{
-        let fm = FileManager.default
-        let path = Bundle.main.resourcePath!
-        let items = try! fm.contentsOfDirectory(atPath: path)
-        var pictures = [String]()
+    func fetchImages(completion: @escaping ([String]) -> Void) {
+        DispatchQueue.global(qos: .background).async {
+            let fm = FileManager.default
+            let path = Bundle.main.resourcePath!
+            let items = try! fm.contentsOfDirectory(atPath: path)
+            var pictures = [String]()
 
-        for item in items {
-            if item.hasPrefix("nssl") {
-                pictures.append(item)
+            for item in items {
+                if item.hasPrefix("nssl") {
+                    pictures.append(item)
+                }
+            }
+            
+            DispatchQueue.main.async {
+                completion(pictures)
             }
         }
-        return pictures
     }
 }
