@@ -11,9 +11,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Storm Viewer"
     }
 
-
+    @IBAction func clickAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let listViewController = storyboard.instantiateViewController(withIdentifier: "Listview") as? ListViewController {
+            navigationController?.pushViewController(listViewController, animated: true)
+        }
+    }
+    
 }
 

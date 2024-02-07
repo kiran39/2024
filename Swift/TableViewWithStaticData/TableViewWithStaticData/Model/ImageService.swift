@@ -8,16 +8,17 @@
 import Foundation
 
 class ImageService {
-    var pictures = [String]()
-    func fetchImages() {
+    func fetchImages() -> [String]{
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
         let items = try! fm.contentsOfDirectory(atPath: path)
-        
+        var pictures = [String]()
+
         for item in items {
             if item.hasPrefix("nssl") {
                 pictures.append(item)
             }
         }
+        return pictures
     }
 }
