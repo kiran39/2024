@@ -41,6 +41,8 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let detailViewController = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetialViewController {
+            let title = "\(indexPath.row + 1) out of \(pictures.count)"
+            detailViewController.showTitle = title
             detailViewController.selectedImage = pictures[indexPath.row]
             navigationController?.pushViewController(detailViewController, animated: true)
         }

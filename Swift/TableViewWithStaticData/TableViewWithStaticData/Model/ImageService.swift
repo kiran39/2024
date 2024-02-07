@@ -20,7 +20,7 @@ class ImageService {
                     pictures.append(item)
                 }
             }
-            
+            pictures.sort()
             DispatchQueue.main.async {
                 completion(pictures)
             }
