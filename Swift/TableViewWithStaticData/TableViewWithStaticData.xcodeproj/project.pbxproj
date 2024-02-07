@@ -28,6 +28,7 @@
 		CC9B8CDD2B71F1FD00B48AA9 /* nssl0034.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CC9B8CD32B71F1FD00B48AA9 /* nssl0034.jpg */; };
 		CC9B8CE02B71F38C00B48AA9 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B8CDF2B71F38C00B48AA9 /* ImageService.swift */; };
 		CC9B8CE22B7208A100B48AA9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B8CE12B7208A100B48AA9 /* ListViewController.swift */; };
+		CC9B8CE42B73527B00B48AA9 /* DetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9B8CE32B73527B00B48AA9 /* DetialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		CC9B8CD32B71F1FD00B48AA9 /* nssl0034.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0034.jpg; sourceTree = "<group>"; };
 		CC9B8CDF2B71F38C00B48AA9 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		CC9B8CE12B7208A100B48AA9 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		CC9B8CE32B73527B00B48AA9 /* DetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				CC9B8C9B2B71F1B800B48AA9 /* SceneDelegate.swift */,
 				CC9B8C9D2B71F1B800B48AA9 /* ViewController.swift */,
 				CC9B8CE12B7208A100B48AA9 /* ListViewController.swift */,
+				CC9B8CE32B73527B00B48AA9 /* DetialViewController.swift */,
 				CC9B8CDE2B71F37600B48AA9 /* Model */,
 				CC9B8C9F2B71F1B800B48AA9 /* Main.storyboard */,
 				CC9B8CA22B71F1BB00B48AA9 /* Assets.xcassets */,
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9B8C9E2B71F1B800B48AA9 /* ViewController.swift in Sources */,
+				CC9B8CE42B73527B00B48AA9 /* DetialViewController.swift in Sources */,
 				CC9B8CE02B71F38C00B48AA9 /* ImageService.swift in Sources */,
 				CC9B8C9A2B71F1B800B48AA9 /* AppDelegate.swift in Sources */,
 				CC9B8CE22B7208A100B48AA9 /* ListViewController.swift in Sources */,
